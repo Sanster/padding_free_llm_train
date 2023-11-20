@@ -3,13 +3,19 @@
 This is an example project to test how to use **padding-free training** and **Multipack Sampler** from [openchat](https://github.com/imoneoi/openchat),
 achieving a **3~10x speedup** compared to the conventional padded training. 
 
-# Supported Models
+## Supported Models
 - [x] Llama
 - [x] Mistral
 - [x] QWen
 - [x] Yi
 
-# Training
+
+## Install requirements
+
+1. Install https://github.com/Dao-AILab/flash-attention
+2. `pip install -r requirements.txt`, make sure `accelerate==0.24.1` and `transformers==4.35.1`
+
+## Training
 
 ```bash
 deepspeed -i localhost:0,1 train.py \
