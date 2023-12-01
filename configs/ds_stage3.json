@@ -25,8 +25,8 @@
   },
     "zero_optimization": {
         "stage": 3,
-        "offload_param": {"device": "cpu", "pin_memory": true},
-        "offload_optimizer": {"device": "cpu", "pin_memory": true},
+        "offload_param": {"device": "cpu", "pin_memory": false},
+        "offload_optimizer": {"device": "cpu", "pin_memory": false},
         "allgather_partitions": true,
         "allgather_bucket_size": 5e8,
         "contiguous_gradients": true,
