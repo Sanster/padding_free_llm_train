@@ -14,14 +14,14 @@ achieving a **3~10x speedup** compared to the conventional padded training.
 ## Install requirements
 
 1. Install https://github.com/Dao-AILab/flash-attention
-2. `pip install -r requirements.txt`, make sure `accelerate==0.24.1` and `transformers==4.35.1`
+2. `pip install -r requirements.txt`
 
 ## Training
 
 ```bash
 deepspeed -i localhost:0,1 train.py \
 --jsonl ./data/random_selected_sharegpt_gpt4_en_zh.jsonl \
---model_name_or_path "Qwen/Qwen-7B" \
+--model_name_or_path "Qwen/Qwen1.5-7B" \
 --padding_free true \
 --sample_max_length 4096  \
 --batch_max_length 32768 \
