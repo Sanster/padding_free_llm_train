@@ -2,6 +2,8 @@
 # coding=utf-8
 import logging
 import os
+
+os.environ["WANDB_DISABLED"] = "true"
 import sys
 from typing import Optional, List
 

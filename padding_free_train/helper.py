@@ -43,10 +43,13 @@ def get_automodel_cls(model_name_or_path: str, padding_free: bool):
     from padding_free_train.modeling.unpadded_llama import LlamaForCausalLM
     from padding_free_train.modeling.unpadded_mistral import MistralForCausalLM
     from padding_free_train.modeling.unpadded_qwen import QWenLMHeadModel
+    from padding_free_train.modeling.unpadded_qwen2 import Qwen2ForCausalLM
 
     if padding_free:
         if "llama" in model_name_or_path.lower():
             auto_model_cls = LlamaForCausalLM
+        elif "qwen1.5" in model_name_or_path.lower():
+            auto_model_cls = Qwen2ForCausalLM
         elif "qwen" in model_name_or_path.lower():
             auto_model_cls = QWenLMHeadModel
         elif "mistral" in model_name_or_path.lower():

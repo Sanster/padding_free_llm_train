@@ -7,6 +7,7 @@ achieving a **3~10x speedup** compared to the conventional padded training.
 - [x] Llama
 - [x] Mistral
 - [x] QWen
+- [x] QWen2
 - [x] Yi
 
 
